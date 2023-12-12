@@ -1,0 +1,28 @@
+version: "3"
+services:
+  ojala:
+    build: ./ojala
+    container_name: ojala
+    ports:
+      - 8080:80
+    volumes:
+      - ./ojala:/var/www/html/
+    depends_on:
+      - datos
+
+  correo:
+    build: ./correo
+    container_name: correo
+    volumes:
+      - ./correo:/var/www/html/
+    depends_on:
+      - datos
+
+  datos:
+    build: ./datos
+    
+  cestero:
+    build: ./cestero
+    container_name: cestero
+    volumes:
+      - ./cestero:/var/www/html/

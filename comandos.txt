@@ -1,0 +1,1 @@
+para acceder a listar las bases de datos, tienes que ir a openTerminal. Y ahí ejecutas: 'mariadb -u root -p' y su contrasñea es: 'root'
